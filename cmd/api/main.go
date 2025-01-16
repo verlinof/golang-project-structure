@@ -8,7 +8,7 @@ import (
 	"github.com/verlinof/golang-project-structure/configs/app_config"
 	"github.com/verlinof/golang-project-structure/configs/db_config"
 	"github.com/verlinof/golang-project-structure/db"
-	"github.com/verlinof/golang-project-structure/internal/routes"
+	"github.com/verlinof/golang-project-structure/internal/route"
 )
 
 func main() {
@@ -33,7 +33,7 @@ func main() {
 	}))
 
 	//Init Router
-	routes.InitRoute(app)
+	route.InitRoute(app)
 
 	//Run Server
 	app.Run(":" + app_config.Config.AppPort)
